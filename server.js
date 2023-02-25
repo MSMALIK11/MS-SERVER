@@ -15,12 +15,21 @@ dotenv.config({ path: "./config/.env" });
 const app = express();
 // handle cross-origin-request
 
+// app.use(
+//   cors({
+//     origin:"*",
+//     credentials: true,
+//   })
+// );
 app.use(
   cors({
-    origin:["https://lms-server.onrender.com","https://localhoat:3000"],
-    credentials: true,
+      origin: true,
+      credentials: true,
   })
 );
+
+
+
 // app.use(cors());
 app.use(express.json());
 app.use(expressFileupload({ useTempFiles: true }));

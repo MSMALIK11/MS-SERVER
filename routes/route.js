@@ -37,7 +37,7 @@ router.route("/admin/course").get(isAuthenticated, getAdminAllCourse);
 router.route("/adminlesson/add/:id").post(isAuthenticated, addLesson);
 router.route("/admin/profile").get(isAuthenticated, getAdminProfile);
 // DELETE COURSE ROUTE
-router.delete('/admin/course/:id',isAuthenticated,deleteCourse)
+router.delete('/admin/course/:id',isAuthenticated,deleteCourse);
 // dcelete lessons
 router
   .route("/course/lesson/:id/:lessonId")
